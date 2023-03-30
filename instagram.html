@@ -7,77 +7,136 @@
     <link rel="stylesheet" type="text/css" href="./instagram.css" />
     <title>Liongram</title>
   </head>
-  <body>
+  <body class="body">
     <div class="main-container">
       <header class="header">
         <img class="logo" src="./images/logo.png" />
-        <input class="search" placeholder="검색" />
-        <img class="icon-list" src="./images/icon_list.png" />
-      </header>
-      <div>
-        <div class="story-container">
-          <div class="story-element">
-            <div class="story"></div>
-            <div class="story-owner">내 스토리</div>
-          </div>
-          <div class="story-element">
-            <div class="story"></div>
-            <div class="story-owner">xeesoxee</div>
-          </div>
-          <div class="story-element">
-            <div class="story"></div>
-            <div class="story-owner">sanghoonnam</div>
-          </div>
-          <div class="story-element">
-            <div class="story"></div>
-            <div class="story-owner">so.yk</div>
-          </div>
-          <div class="story-element">
-            <div class="story"></div>
-            <div class="story-owner">jennierubyjane</div>
-          </div>
+        <input class="search" id="searchId" placeholder="검색" />
+        <div class="search-container"></div>
+        <div class="icon-list">
+          <img class="icon" src="./images/home_icon.png" />
+          <img class="icon" id="chat-icon" src="./images/feed_comment_button.png" />
+          <img class="icon" src="./images/compass_icon.png" />
+          <img class="icon" id="heart-icon" src="./images/heart_icon.png" />
         </div>
-
-        <section class="article-container">
-          <div class="profile-container">
-            <div class="profile">
-              <img
-                id="profile-image"
-                class="profile-image"
-                src="./images/profile.png"
-              />
-              <span id="profile-name" class="profile-name">likelion_snu</span>
+      </header>
+      <div class="box-container">
+        <div class="user-section">
+          <div class="story-container">
+            <div class="story-element">
+              <img class="story" src="./images/marcus.png"/>
+              <div class="story-owner">marcusrashford</div>
             </div>
-            <div class="menu"></div>
+            <div class="story-element">
+              <img class="story" src="./images/xee.png"/>
+              <div class="story-owner">xeesoxee</div>
+            </div>
+            <div class="story-element">
+              <img class="story" src="./images/son.png">
+              <div class="story-owner">hmson_7</div>
+            </div>
+            <div class="story-element">
+              <img class="story" src="./images/jay,png.png">
+              <div class="story-owner">moresojuplease</div>
+            </div>
+            <div class="story-element">
+              <img class="story" src="./images/seorina.png">
+              <div class="story-owner">seorina</div>
+            </div>
           </div>
-          <div class="article">
-            <img class="article" src="./images/article.jpg" />
+          <div class="story-modal">
+            <img class="story-image" id="story-image1" src="./images/marcus_story.png" />
+            <img class="story-image" id="story-image2" src="./images/xee_story.png" />
+            <img class="story-image" id="story-image3" src="./images/hm_story.png" />
+            <img class="story-image" id="story-image4" src="./images/jay_story.png" />
+            <img class="story-image" id="story-image5" src="./images/seorina_story.png" />
           </div>
-          <div class="button-container">
-            <img
-              id="like-btn"
-              class="feed-buttons"
-              src="./images/black-heart.png"
-            />
-            <img
-              id="comment-btn"
-              class="feed-buttons"
-              src="./images/feed_comment_button.png"
-            />
-            <img
-              id="message-btn"
-              class="feed-buttons"
-              src="./images/feed_share_button.png"
-            />
-          </div>
-          <form class="comments-create-form">
-            <img class="smile" src="./images/smile.png" />
-            <input class="comment-input" placeholder="댓글 달기..." />
-            <button type="submit" class="comment-button">게시</button>
-          </form>
-          <div class="comments-container"></div>
-        </section>
+          <section class="article-container">
+            <div class="profile-container">
+              <div class="profile">
+                <img
+                  id="profile-image"
+                  class="profile-image"
+                  src="./images/profile.png"
+                
+                />
+                <span
+                  id="profile-name"
+                  class="profile-name"
+                  onclick=window.open("https://www.instagram.com/likelion_snu/")
+                  >likelion_snu</span
+                >
+              </div>
+              <div class="menu"></div>
+            </div>
+            <div class="article">
+              <div class="profile-modal">
+                <img id="profile-modal" src="./images/likelion_snu.png" />
+              </div>
+              <img class="article" src="./images/article.jpg" />
+            </div>
+            <div class="button-container">
+              <img
+                id="like-btn"
+                class="feed-buttons"
+                src="./images/black-heart.png"
+              />
+              <img
+                id="liked-btn"
+                class="feed-buttons"
+                src="./images/red-heart.png"
+              />
+              <img
+                id="comment-btn"
+                class="feed-buttons"
+                src="./images/feed_comment_button.png"
+              />
+              <img
+                id="message-btn"
+                class="feed-buttons"
+                src="./images/feed_share_button.png"
+              />
+            </div>
+            <div id="like-count-text">
+              <span>좋아요</span>
+              <span id="like-count">1003</span>
+            </div>
+            <div class="emoticons">
+              <div class="emosec1">
+                <div class="emo" id="emo1">😀</div>
+                <div class="emo" id="emo2">😍</div>
+                <div class="emo" id="emo3">🫠</div>
+                <div class="emo" id="emo4">🥲</div>
+                <div class="emo" id="emo5">😋</div>
+              </div>
+              <div class="emosec2">
+                <div class="emo" id="emo6">💯</div>
+                <div class="emo" id="emo7">💦</div>
+                <div class="emo" id="emo8">💤</div>
+                <div class="emo" id="emo9">💭</div>
+                <div class="emo" id="emo10">👌</div>
+              </div>
+            </div>
+            <form class="comments-create-form">
+              <img class="smile" src="./images/smile.png" />
+              <input class="comment-input" placeholder="댓글 달기..." />
+              <button type="submit" class="comment-button">게시</button>
+            </form>
+            <div class="comments-container"></div>
+          </section>
+        </div>
+        <div class="right-section">
+          <img id="news" src="./images/news.png" />
+        </div>
+        <div class="direct-message">
+          <img id="dm" src="./images/message.png" />
+        </div>
       </div>
+      <footer>
+        <p class="footer-message">Ⓒ2022 INSTAGRAM FROM META</p>
+      </footer>
     </div>
+    <script src="./instagram.js"></script>
+    <script src="./instagram2.js"></script>
   </body>
 </html>
