@@ -1,7 +1,53 @@
+.header .logo {
+  width: 110px;
+  height: 30px;
+}
+
+.header .icon-list {
+  display: flex;
+  flex-direction: row;
+  width: 130px;
+  height: 30px;
+}
+
+.search {
+  /* 추가 */
+  padding: 3px;
+  border: 2px solid #d3d3d3;
+  border-radius: 2px;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+.profile span {
+  /* 추가 */
+  font-weight: bold;
+}
+
+.profile-image {
+  width: 20px;
+  border-radius: 10px; /* 추가 */
+}
+
+.article {
+  width: 100%;
+}
+
+.feed-buttons {
+  width: 40px;
+  margin-left: 3px; /* 추가 */
+}
+
+.smile {
+  width: 30px;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 60%;
   margin: auto;
 }
 
@@ -9,70 +55,19 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 30px;
+  /* 아래 부분 추가 */
   border-bottom: 2px solid #d3d3d3;
   padding-bottom: 10px;
 }
 
-.header .logo {
-  height: 100%;
-}
-
-.header .search {
-  padding: 3px;
-  border: 2px solid #d3d3d3;
-  border-radius: 3px;
-}
-.header .icon-list {
-  height: 100%;
-}
-
-.content-container {
-  width: 100%;
-  margin: auto;
-  align-items: center;
-}
-
-.story-container {
+.profile {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 10px;
-  padding-right: 20%;
-  padding-left: 20%;
-  height: 20%;
+  /* 추가 */
 }
 
-.story-container .story-element {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.story-container .story {
-  width: 40px;
-  height: 40px;
-  border: 2px solid orange;
-  border-radius: 50%;
-  background-color: gray;
-}
-
-.story-owner {
-  margin-top: 2px;
-  font-size: 12px;
-}
-
-.article-container {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin: 10px auto;
-  border: 2px solid #d3d3d3;
-}
-
-.profile-image {
-  width: 20px;
-  border-radius: 10px;
+.profile-name {
+  margin-left: 5px;
 }
 
 .menu {
@@ -81,52 +76,99 @@
   background-image: radial-gradient(circle, black 2px, transparent 2.1px);
   background-size: 100% 33.33%;
 }
+.menu:hover {
+  cursor: pointer;
+}
 
 .profile-container {
-  padding: 10px;
+  padding: 10px; /* 추가 */
   display: flex;
   justify-content: space-between;
 }
 
-.profile {
+.story-container {
   display: flex;
-  width: 20%;
+  flex-direction: row;
+  justify-content: space-between;
+  /* 아래 부분 추가 */
+  margin-top: 10px;
+  height: 20%;
+  /* width: 100%; */
+  /* border: 2px solid #d3d3d3; */
 }
 
-.profile-name {
-  margin-left: 5px;
-  font-weight: bold;
+.story-container .story-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.story-container .story-element:hover {
+  cursor: pointer;
 }
 
-.profile-image {
-  width: 20px;
-  border-radius: 10px;
+.story-container .story {
+  object-fit: fill;
+  width: 40px;
+  height: 40px;
+  border: 2px solid orange;
+  border-radius: 50%;
+}
+
+.story-container .story-owner {
+  margin-top: 2px;
+  font-size: 8px;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  /* 아래 부분 추가 */
+  width: 100%;
+  margin: 10px auto;
+  border: 2px solid #d3d3d3;
 }
 
 .button-container {
-  border-bottom: 2px solid #d3d3d3;
   padding-top: 5px;
-}
-
-.feed-buttons {
-  margin-left: 2px;
-  width: 40px;
-}
-
-.comment-container {
   display: flex;
-  padding: 5px 0px;
+  align-items: center;
+}
+
+.comments-create-form {
+  display: flex;
+  align-items: center;
   width: 100%;
 }
 
-.smile {
-  width: 30px;
+#liked-btn {
+  display: none;
+  max-width: 26px;
+  margin-left: 10px;
+  margin-right: 7px;
+  cursor: pointer;
 }
 
-.comment {
+#like-btn {
+  max-width: 26px;
+  margin-left: 10px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.comment-wrapper {
+  padding: 0px 20px 5px 10px;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-input {
   height: 25px;
   border: none;
   width: 80%;
+  outline: none;
 }
 
 .comment-button {
@@ -136,9 +178,165 @@
   opacity: 50%;
 }
 
+.comment-button:hover {
+  cursor: pointer;
+}
+
+.story-modal {
+  display: none; /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 1; /* 모달창을 제일 앞에 두기 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 허용 auto */
+  cursor: pointer; /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.9); /* 0.8은 투명도*/
+}
+
+.story-image {
+  display: none;
+  width: 30%;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+}
+
+.profile-modal {
+  display: none;
+}
+
+#profile-modal {
+  width: 350px;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+}
+
+.comment {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+}
+
+.comment-wrapper:hover > .comment-delete-icon {
+  display: block;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: none;
+}
+
 .footer-message {
   display: flex;
   justify-content: center;
   color: gray;
   font-size: 15px;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.left-section {
+  width: 22.5%;
+  border-radius: 50%;
+}
+
+.right-section {
+  display: none;
+}
+.direct-message {
+  display: none;
+}
+
+#news {
+  width: 300px;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+}
+
+#dm {
+  width: 300px;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+}
+.user-section {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  width: 80%;
+  height: 100%;
+}
+
+.emoticons {
+  display: none;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+}
+
+.emosec1 {
+  display: flex;
+  flex-direction: row;
+}
+.emosec2 {
+  display: flex;
+  flex-wrap: row;
+}
+
+.emo {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  font-size: 35px;
+}
+
+.search-container {
+  display: none;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.search-delete-icon {
+  margin-left: 10px;
+  margin-right: 15px;
+  height: 15px;
+}
+
+.search-profile {
+  margin-left: 10px;
+  height: 30px;
+}
+
+.input {
+  margin-left: 10px;
+  font-size: large;
+}
+
+.history {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: small;
+}
+.input-wrapper {
+  border-top: 1px solid #d3d3d3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
 }
