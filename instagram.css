@@ -169,3 +169,109 @@
 .comment-button:hover {
   cursor: pointer;
 }
+
+.story-modal {
+  display: none; /* 모달창 숨겨 놓기 */
+  position: fixed;
+  z-index: 1; /* 모달창을 제일 앞에 두기 */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 허용 auto */
+  cursor: pointer; /* 마우스 손가락모양 */
+  background-color: rgba(0, 0, 0, 0.8); /* 0.8은 투명도*/
+}
+
+#story-image {
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 모달 가운데에 놓기 */
+}
+
+/* 스토리모달 */
+#profile-modal {
+  display: none;
+  width: 325px;
+  height: 250px;
+}
+
+#like-count-text {
+  padding: 5px 0 5px 10px;
+  border-bottom: 2px solid #d3d3d3;
+  font-size: 14px;
+}
+
+#like-count {
+  font-weight: bold;
+}
+
+#liked-btn {
+  display: none;
+  max-width: 26px;
+  margin-left: 10px;
+  margin-right: 7px;
+}
+
+#liked-btn:hover {
+  cursor: pointer;
+}
+
+/* 댓글 css */
+.comment {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.comment-wrapper:hover > .comment-delete-icon {
+  display: block;
+}
+
+.comment-delete-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  display: none;
+}
+
+.footer-message {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 15px;
+}
+
+.emoji_list_first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 30px;
+}
+
+.emoji_list_second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 30px;
+}
+
+.emoji_list {
+  padding: 5px;
+  border: 1px solid;
+  width: 250px;
+  background-color: black;
+  display: none;
+}
+
+.emoji_list_title {
+  color: gray;
+  font-size: 15px;
+}
+
+.icon-list{
+  display: flex;
+  justify-content:end
+}
