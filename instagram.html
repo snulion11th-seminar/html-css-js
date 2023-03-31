@@ -8,34 +8,50 @@
     <title>Liongram</title>
   </head>
   <body>
+    <!--<h2 onclick="alert('멋사11기화이팅!')">inline javascript</h2>
+    <h2 id="internal">interal javascript</h2>
+    <script>
+      internal.onclick = function () {
+        alert("4주차 화이팅!");
+      };
+    </script>-->
     <div class="main-container">
       <header class="header">
         <img class="logo" src="./images/logo.png" />
         <input class="search" placeholder="검색" />
-        <img class="icon-list" src="./images/icon_list.png" />
+        <div class="icon-list">
+          <img class="icon-list-small" src="./images/home_icon.png" />
+          <img class="icon-list-small" src="./images/arrow_icon.png" />
+          <img class="icon-list-small" src="./images/compass_icon.png" />
+          <img class="icon-list-small" id="header-heart" src="./images/heart_icon.png" />
+        </div>
       </header>
       <div>
         <div class="story-container">
           <div class="story-element">
-            <div class="story"></div>
+            <img class="story" src = "images/human-profile.jpg">
             <div class="story-owner">내 스토리</div>
           </div>
           <div class="story-element">
-            <div class="story"></div>
+            <img class="story" src = "images/gksthgml.jpg">
             <div class="story-owner">xeesoxee</div>
           </div>
           <div class="story-element">
-            <div class="story"></div>
-            <div class="story-owner">sanghoonnam</div>
+            <img class="story" src = "images/flwjd.jpg">
+            <div class="story-owner">leejung_lee</div>
           </div>
           <div class="story-element">
-            <div class="story"></div>
-            <div class="story-owner">so.yk</div>
+            <img class="story" src = "images/xodus.jpg">
+            <div class="story-owner">taeyeon_ss</div>
           </div>
           <div class="story-element">
-            <div class="story"></div>
+            <img class="story" src = "./images/jenny.jpg">
             <div class="story-owner">jennierubyjane</div>
           </div>
+        </div>
+
+        <div class="story-modal">
+          <img id="story-image" src="./images/profile.png" />
         </div>
 
         <section class="article-container">
@@ -51,6 +67,9 @@
             <div class="menu"></div>
           </div>
           <div class="article">
+            <div class="profile-modal">
+              <img id="profile-modal" src="./images/likelion_snu.png" />
+            </div>
             <img class="article" src="./images/article.jpg" />
           </div>
           <div class="button-container">
@@ -59,6 +78,12 @@
               class="feed-buttons"
               src="./images/black-heart.png"
             />
+            <img
+              id="liked-btn"
+              class="feed-buttons"
+              src="./images/red-heart.png"
+            />
+
             <img
               id="comment-btn"
               class="feed-buttons"
@@ -70,6 +95,10 @@
               src="./images/feed_share_button.png"
             />
           </div>
+          <div id="like-count-text">
+            <span>좋아요</span>
+            <span id="like-count">1003</span>
+          </div>
           <form class="comments-create-form">
             <img class="smile" src="./images/smile.png" />
             <input class="comment-input" placeholder="댓글 달기..." />
@@ -77,7 +106,125 @@
           </form>
           <div class="comments-container"></div>
         </section>
+
+        <div class="notice">
+          <div class="notice-header">알림</div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/profile.png" />
+            <div class="notice-middle">
+              <span class="notice-bold">lion123</span>
+              <span class="notice-light"
+                >님이 회원님의 게시물을 좋아합니다.</span
+              >
+              <span class="notice-time"> 방금</span>
+            </div>
+            <img class="notice-img2" src="./images/article.jpg" />
+          </div>
+          <div class="notice-header">어제</div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/empty-profile.jpg" />
+            <div class="notice-middle">
+              <span class="notice-bold">lily_fl23</span>
+              <span class="notice-light"
+                >님이 회원님을 팔로우하기 시작했습니다.</span
+              >
+              <span class="notice-time"> 1일</span>
+            </div>
+            <button class="notice-follow-button">팔로잉</button>
+          </div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/human-profile.jpg" />
+            <div class="notice-middle">
+              <span class="notice-bold">_jiwoo_h</span>
+              <span class="notice-light"
+                >님이 회원님의 게시물을 좋아합니다.</span
+              >
+              <span class="notice-time"> 1일</span>
+            </div>
+            <img class="notice-img2" src="./images/article.jpg" />
+          </div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/empty-profile.jpg" />
+            <div class="notice-middle">
+              <span class="notice-bold">zheldWoaTj</span>
+              <span class="notice-light"
+                >님이 회원님의 게시물을 좋아합니다.</span
+              >
+              <span class="notice-time"> 1일</span>
+            </div>
+            <img class="notice-img3" src="./images/instagramlulu.jpeg" />
+          </div>
+
+          <div class="notice-header">이번 주</div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/empty-profile.jpg" />
+            <div class="notice-middle">
+              <span class="notice-bold">rhkwp_whgdk</span>
+              <span class="notice-light"
+                >님이 회원님을 팔로우하기 시작했습니다.</span
+              >
+              <span class="notice-time"> 3일</span>
+            </div>
+            <button class="notice-follow-button">팔로잉</button>
+          </div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/empty-profile.jpg" />
+            <div class="notice-middle">
+              <span class="notice-bold">zheldWoaTj</span>
+              <span class="notice-light"
+                >님이 회원님을 팔로우하기 시작했습니다.</span
+              >
+              <span class="notice-time"> 5일</span>
+            </div>
+            <button class="notice-unfollow-button">팔로우</button>
+          </div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/empty-profile.jpg" />
+            <div class="notice-middle">
+              <span class="notice-bold">dkwoalTek</span>
+              <span class="notice-light"
+                >님이 회원님의 게시물을 좋아합니다.</span
+              >
+              <span class="notice-time"> 6일</span>
+            </div>
+            <img class="notice-img3" src="./images/instagramlulu.jpeg" />
+          </div>
+          <div class="notice-content">
+            <img class="notice-img" src="./images/empty-profile.jpg" />
+            <div class="notice-middle">
+              <span class="notice-bold">dkwoalTek</span>
+              <span class="notice-light"
+                >님이 회원님의 게시물을 좋아합니다.</span
+              >
+              <span class="notice-time"> 1일</span>
+            </div>
+            <img class="notice-img3" src="./images/instagramlulu.jpeg" />
+        </div>
+        <div class="emoji-content">
+          <div class="best-emoji">최고 인기 이모티콘</div>
+          <div class="best-emoji-content">
+            <div class="best-emojicontent">😊</div>
+            <div class="best-emojicontent">🐯</div>
+            <div class="best-emojicontent">🦁</div>
+            <div class="best-emojicontent">🤲</div>
+            <div class="best-emojicontent">😋</div>
+            <div class="best-emojicontent">💕</div>
+            <div class="best-emojicontent">💗</div>
+            <div class="best-emojicontent">🐰</div>
+            <div class="best-emojicontent">🐤</div>
+            <div class="best-emojicontent">🍀</div>
+            <div class="best-emojicontent">🌞</div>
+            <div class="best-emojicontent">🦙</div>
+            <div class="best-emojicontent">💦</div>
+            <div class="best-emojicontent">❄</div>
+          </div>
+        </div>
       </div>
+      <footer>
+        <p class="footer-message">Ⓒ2022 INSTAGRAM FROM META</p>
+      </footer>
     </div>
+    <script src="./instagram.js" type="module"></script>
+    <script src="./instagram2.js" type="module"></script>
   </body>
 </html>
